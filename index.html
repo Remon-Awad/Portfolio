@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Remon Awad - React Front-End Developer building modern, responsive, and user-friendly websites.">
+
+    <meta name="keywords"
+        content="Remon Awad, React Developer, Front-End Developer, Web Developer, JavaScript, HTML, CSS">
+
+    <meta name="author" content="Remon Awad">
+
+    <title>Remon Awad | React Front-End Developer</title>
+
+
+    <!-- ========================================
+         GOOGLE FONTS
+    ========================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- ========================================
+         CSS
+    ========================================= -->
+
+    <link rel="stylesheet" href="Remon's Portfolio.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ========================================
+         PRELOADER
+    ========================================= -->
+
+    <div
+        class="preloader"
+        id="preloader"
+        aria-label="Loading portfolio"
+        role="status"
+        aria-live="polite"
+    >
+
+        <div class="preloader-content">
+
+
+            <!-- ---------- Welcome Message ---------- -->
+
+            <div class="preloader-welcome">
+
+                <span class="preloader-welcome-small">
+                    Welcome to
+                </span>
+
+                <span class="preloader-welcome-main">
+                    my
+                    <span class="preloader-welcome-accent">
+                        portfolio
+                    </span>
+                </span>
+
+            </div>
+
+
+            <!-- ---------- Logo ---------- -->
+
+            <div class="preloader-logo">
+                Remon<span>.</span>
+            </div>
+
+
+            <!-- ---------- Loading Message ---------- -->
+
+            <p
+                class="preloader-text"
+                id="preloaderText"
+            >
+                Almost there
+            </p>
+
+
+            <!-- ---------- Progress ---------- -->
+
+            <div class="preloader-progress-wrapper">
+
+                <div class="preloader-bar">
+
+                    <div
+                        class="preloader-progress"
+                        id="preloaderProgress"
+                    ></div>
+
+                    <span
+                        class="preloader-progress-dot"
+                        id="preloaderProgressDot"
+                    ></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ---------- Percentage ---------- -->
+
+            <div class="preloader-footer">
+
+                <span
+                    class="preloader-percentage"
+                    id="preloaderPercentage"
+                >
+                    0%
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ---------- Decorative Elements ---------- -->
+
+        <span class="preloader-decoration preloader-decoration-one"></span>
+
+        <span class="preloader-decoration preloader-decoration-two"></span>
+
+        <span class="preloader-star">
+            ✦
+        </span>
+
+    </div>
+
+
+    <!-- ========================================
+         HEADER / NAVBAR
+    ========================================= -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+
+            <!-- ---------- Logo ---------- -->
+
+            <a href="#home" class="logo">
+                Remon<span>.</span>
+            </a>
+
+
+            <!-- ---------- Navigation ---------- -->
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home" class="nav-link active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services" class="nav-link">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects" class="nav-link">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills" class="nav-link">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-link">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- ---------- Navigation Actions ---------- -->
+
+            <div class="nav-actions">
+
+
+                <!-- Theme Toggle -->
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    type="button"
+                    aria-label="Switch to dark mode"
+                    title="Switch to dark mode"
+                >
+
+                    <span class="theme-icon">
+                        🌙
+                    </span>
+
+                </button>
+
+
+                <!-- Navigation CTA -->
+
+                <a href="#contact" class="nav-cta">
+                    Let's Talk
+                </a>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ========================================
+         MAIN CONTENT
+    ========================================= -->
+
+    <main>
+
+
+        <!-- ========================================
+             HERO SECTION
+        ========================================= -->
+
+        <section class="hero section" id="home">
+
+            <div class="container hero-container">
+
+
+                <!-- Hero Content -->
+
+                <div class="hero-content">
+
+                    <p class="hero-greeting">
+                        Hello, I'm
+                    </p>
+
+                    <h1 class="hero-title">
+                        Remon
+                        <span>Awad</span>
+                    </h1>
+
+                    <h2 class="hero-role">
+                        React Front-End Developer
+                    </h2>
+
+                    <p class="hero-description">
+                        I build modern, responsive, and user-friendly websites
+                        that help businesses and entrepreneurs build a strong
+                        online presence.
+                    </p>
+
+
+                    <!-- Hero Buttons -->
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Let's Work Together
+                        </a>
+
+                    </div>
+
+
+                    <!-- Social Links -->
+
+                    <div class="hero-socials">
+
+                        <a
+                            href="#"
+                            class="social-link"
+                            aria-label="GitHub"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            GitHub
+                        </a>
+
+                        <span class="social-separator">
+                            /
+                        </span>
+
+                        <a
+                            href="#"
+                            class="social-link"
+                            aria-label="LinkedIn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Hero Visual -->
+
+                <div class="hero-visual">
+
+                    <div class="hero-shape">
+
+                        <div class="hero-card">
+
+                            <div class="hero-card-top">
+
+                                <span class="status-dot"></span>
+
+                                <span>
+                                    Available for projects
+                                </span>
+
+                            </div>
+
+
+                            <div class="hero-code">
+
+                                <span class="code-line">
+
+                                    <span class="code-symbol">
+                                        &lt;
+                                    </span>
+
+                                    <span class="code-tag">
+                                        developer
+                                    </span>
+
+                                    <span class="code-symbol">
+                                        &gt;
+                                    </span>
+
+                                </span>
+
+
+                                <span class="code-line code-indent">
+
+                                    building<span class="code-equal">=</span>
+
+                                    <span class="code-value">
+                                        "digital experiences"
+                                    </span>
+
+                                </span>
+
+
+                                <span class="code-line">
+
+                                    <span class="code-symbol">
+                                        &lt;/
+                                    </span>
+
+                                    <span class="code-tag">
+                                        developer
+                                    </span>
+
+                                    <span class="code-symbol">
+                                        &gt;
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <span class="decorative-dot dot-one"></span>
+
+                    <span class="decorative-dot dot-two"></span>
+
+                    <span class="decorative-star">
+                        ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             ABOUT SECTION
+        ========================================= -->
+
+        <section class="about section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        About Me
+                    </p>
+
+                    <h2 class="section-title">
+                        Turning ideas into
+                        <span>useful experiences.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="about-grid">
+
+
+                    <!-- About Text -->
+
+                    <div class="about-content">
+
+                        <p class="about-text">
+                            I'm a Computer Science student at El Shorouk Academy
+                            and a React Front-End Developer passionate about
+                            building clean and responsive web interfaces.
+                        </p>
+
+                        <p class="about-text">
+                            I develop my skills through the DEPI React Front-End
+                            track and practical projects, while continuously
+                            improving my problem-solving and development skills.
+                        </p>
+
+                        <p class="about-text">
+                            My goal is to create digital products that are not
+                            only visually appealing, but also simple, useful,
+                            and easy to use.
+                        </p>
+
+                    </div>
+
+
+                    <!-- About Highlights -->
+
+                    <div class="about-highlights">
+
+
+                        <div class="highlight-card">
+
+                            <span class="highlight-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Problem Solver
+                                </h3>
+
+                                <p>
+                                    I enjoy breaking complex problems into
+                                    simple and practical solutions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="highlight-card">
+
+                            <span class="highlight-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Continuous Learner
+                                </h3>
+
+                                <p>
+                                    Always improving my technical skills through
+                                    learning and real-world projects.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="highlight-card">
+
+                            <span class="highlight-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Client Focused
+                                </h3>
+
+                                <p>
+                                    I care about creating websites that serve
+                                    real business and user needs.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             SERVICES SECTION
+        ========================================= -->
+
+        <section class="services section" id="services">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        What I Do
+                    </p>
+
+                    <h2 class="section-title">
+                        How I can help
+                        <span>your business.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- Service 01 -->
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+                        <div class="service-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <h3>
+                            React Front-End Development
+                        </h3>
+
+                        <p>
+                            Building modern and maintainable web interfaces
+                            using React and JavaScript.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Service 02 -->
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                        <div class="service-icon">
+                            ◫
+                        </div>
+
+                        <h3>
+                            Responsive Websites
+                        </h3>
+
+                        <p>
+                            Creating websites that look and work smoothly
+                            across desktop, tablet, and mobile devices.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Service 03 -->
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                        <div class="service-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Landing Pages
+                        </h3>
+
+                        <p>
+                            Designing focused landing pages that clearly
+                            communicate your brand and services.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Service 04 -->
+
+                    <article class="service-card">
+
+                        <span class="service-number">
+                            04
+                        </span>
+
+                        <div class="service-icon">
+                            ⇄
+                        </div>
+
+                        <h3>
+                            API Integration
+                        </h3>
+
+                        <p>
+                            Connecting front-end interfaces with APIs to
+                            display and manage dynamic data.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             PROJECTS SECTION
+        ========================================= -->
+
+        <section class="projects section" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-projects">
+
+
+                    <div>
+
+                        <p class="section-label">
+                            Selected Work
+                        </p>
+
+                        <h2 class="section-title">
+                            Projects I'm
+                            <span>proud of.</span>
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-intro">
+                        A selection of projects where I applied my technical
+                        skills to create practical and user-friendly experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- Project 01 -->
+
+                    <article class="project-card project-featured">
+
+                        <div class="project-image">
+
+                            <div class="project-browser">
+
+                                <div class="browser-bar">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="browser-content">
+
+                                    <span class="browser-title">
+                                        Booxera
+                                    </span>
+
+                                    <span class="browser-subtitle">
+                                        Online Bookstore
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+
+                                <span>
+                                    01
+                                </span>
+
+                                <span>
+                                    React
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Booxera
+                            </h3>
+
+                            <p>
+                                An online bookstore website designed to provide
+                                users with a simple and intuitive browsing
+                                experience.
+                            </p>
+
+
+                            <div class="project-tech">
+
+                                <span>
+                                    React
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    Bootstrap
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    Live Demo ↗
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 02 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <div class="project-placeholder">
+
+                                <span>
+                                    Business Website
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+
+                                <span>
+                                    02
+                                </span>
+
+                                <span>
+                                    Business
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Business Landing Page
+                            </h3>
+
+                            <p>
+                                A modern landing page concept designed for a
+                                small business to establish a professional
+                                online presence.
+                            </p>
+
+
+                            <div class="project-tech">
+
+                                <span>
+                                    React
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    Responsive
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    Live Demo ↗
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Project 03 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <div class="project-placeholder">
+
+                                <span>
+                                    Restaurant Website
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-info">
+
+                            <div class="project-meta">
+
+                                <span>
+                                    03
+                                </span>
+
+                                <span>
+                                    Web App
+                                </span>
+
+                            </div>
+
+
+                            <h3>
+                                Restaurant Website
+                            </h3>
+
+                            <p>
+                                A responsive restaurant website with an
+                                interactive menu and clear customer-focused
+                                navigation.
+                            </p>
+
+
+                            <div class="project-tech">
+
+                                <span>
+                                    React
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    API
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-links">
+
+                                <a href="#" target="_blank">
+                                    Live Demo ↗
+                                </a>
+
+                                <a href="#" target="_blank">
+                                    GitHub ↗
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             SKILLS SECTION
+        ========================================= -->
+
+        <section class="skills section" id="skills">
+
+            <div class="container">
+
+                <div class="skills-layout">
+
+
+                    <!-- Skills Heading -->
+
+                    <div class="skills-intro">
+
+                        <p class="section-label">
+                            My Toolkit
+                        </p>
+
+                        <h2 class="section-title">
+                            Technologies I
+                            <span>work with.</span>
+                        </h2>
+
+                        <p>
+                            My main focus is Front-End Development, while my
+                            programming background helps me approach problems
+                            with a strong logical mindset.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Skills List -->
+
+                    <div class="skills-list">
+
+
+                        <div class="skill-group">
+
+                            <h3>
+                                Front-End
+                            </h3>
+
+                            <div class="skill-tags">
+
+                                <span>
+                                    HTML
+                                </span>
+
+                                <span>
+                                    CSS
+                                </span>
+
+                                <span>
+                                    JavaScript
+                                </span>
+
+                                <span>
+                                    React
+                                </span>
+
+                                <span>
+                                    Bootstrap
+                                </span>
+
+                                <span>
+                                    Responsive Design
+                                </span>
+
+                                <span>
+                                    API Integration
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill-group">
+
+                            <h3>
+                                Tools
+                            </h3>
+
+                            <div class="skill-tags">
+
+                                <span>
+                                    Git
+                                </span>
+
+                                <span>
+                                    GitHub
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="skill-group">
+
+                            <h3>
+                                Programming
+                            </h3>
+
+                            <div class="skill-tags">
+
+                                <span>
+                                    C++
+                                </span>
+
+                                <span>
+                                    C#
+                                </span>
+
+                                <span>
+                                    Python
+                                </span>
+
+                                <span>
+                                    OOP
+                                </span>
+
+                                <span>
+                                    Problem Solving
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             WORK PROCESS SECTION
+        ========================================= -->
+
+        <section class="process section" id="process">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        My Process
+                    </p>
+
+                    <h2 class="section-title">
+                        From idea to
+                        <span>website.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+
+                    <div class="process-step">
+
+                        <span class="process-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Understand your goals, audience, and project
+                            requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <span class="process-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Develop
+                        </h3>
+
+                        <p>
+                            Turn the idea into a clean, responsive, and
+                            user-friendly interface.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <span class="process-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Test
+                        </h3>
+
+                        <p>
+                            Test the website, fix issues, and refine the
+                            overall experience.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-step">
+
+                        <span class="process-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Deliver
+                        </h3>
+
+                        <p>
+                            Deliver a polished website ready to represent
+                            your business online.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             CTA / CONTACT SECTION
+        ========================================= -->
+
+        <section class="contact section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-wrapper">
+
+
+                    <div class="contact-content">
+
+                        <p class="section-label">
+                            Have a project in mind?
+                        </p>
+
+                        <h2 class="contact-title">
+                            Let's build something
+                            <span>great together.</span>
+                        </h2>
+
+                        <p class="contact-description">
+                            Whether you need a business website, landing page,
+                            or a modern React interface, I'd love to hear
+                            about your idea.
+                        </p>
+
+                        <a
+                            href="mailto:your-email@example.com"
+                            class="btn btn-light"
+                        >
+                            Start a Conversation ↗
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-decoration">
+
+                        <span class="contact-circle circle-one"></span>
+
+                        <span class="contact-circle circle-two"></span>
+
+                        <span class="contact-star">
+                            ✦
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         FOOTER
+    ========================================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+
+            <a href="#home" class="logo">
+                Remon<span>.</span>
+            </a>
+
+
+            <p>
+                Designed & Built by Remon Awad
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="Remon's Portfolio.js"></script>
+
+</body>
+
+</html>
