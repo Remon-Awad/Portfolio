@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Remon Awad - React Front-End Developer building modern, responsive, and user-focused digital experiences.">
+    <meta name="keywords"
+        content="Remon Awad, React Developer, Front-End Developer, Web Developer, JavaScript, HTML, CSS">
+    <meta name="author" content="Remon Awad">
+
+    <title>Remon Awad | React Front-End Developer</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PRELOADER
+    ====================================================== -->
+    <div class="preloader" id="preloader" aria-label="Loading portfolio" role="status" aria-live="polite">
+        <div class="preloader-content">
+
+            <!-- ---------- Welcome Message ---------- -->
+            <div class="preloader-welcome">
+                <span class="preloader-welcome-small">Welcome to</span>
+                <span class="preloader-welcome-main">
+                    my
+                    <span class="preloader-welcome-accent">portfolio</span>
+                </span>
+            </div>
+
+            <!-- ---------- Logo ---------- -->
+            <div class="preloader-logo">Remon<span>.</span></div>
+
+            <!-- ---------- Loading Message ---------- -->
+            <p class="preloader-text" id="preloaderText">Almost there</p>
+
+            <!-- ---------- Progress ---------- -->
+            <div class="preloader-progress-wrapper">
+                <div class="preloader-bar">
+                    <div class="preloader-progress" id="preloaderProgress"></div>
+                    <span class="preloader-progress-dot" id="preloaderProgressDot"></span>
+                </div>
+            </div>
+
+            <!-- ---------- Percentage ---------- -->
+            <div class="preloader-footer">
+                <span class="preloader-percentage" id="preloaderPercentage">0%</span>
+            </div>
+        </div>
+
+        <!-- ---------- Decorative Elements ---------- -->
+        <span class="preloader-decoration preloader-decoration-one"></span>
+        <span class="preloader-decoration preloader-decoration-two"></span>
+        <span class="preloader-star">✦</span>
+    </div>
+
+    <!-- =====================================================
+         HEADER / NAVBAR
+    ====================================================== -->
+    <header class="header">
+        <nav class="navbar container">
+
+            <!-- ---------- Logo ---------- -->
+            <a href="#home" class="logo" aria-label="Remon Awad - Home">Remon<span>.</span></a>
+
+            <!-- ---------- Nav Right Group (Links + Actions) ---------- -->
+            <div class="nav-right">
+
+                <!-- Navigation -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <!-- Navigation Actions -->
+                <div class="nav-actions">
+
+                    <!-- Theme Toggle -->
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode"
+                        title="Switch to dark mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+
+                    <!-- Navigation CTA -->
+                    <a href="#contact" class="nav-cta">Let's Talk</a>
+
+                    <!-- =============================================
+                         Mobile Menu Button
+                    ============================================== -->
+                    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+                        title="Open navigation menu" aria-expanded="false">
+                        <span class="menu-toggle-icon menu-icon-code" aria-hidden="true">&lt;/&gt;</span>
+                        <span class="menu-toggle-icon menu-icon-close" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 6 6 18" />
+                                <path d="M6 6l12 12" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+    <main>
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+        <section class="hero section" id="home">
+            <div class="container hero-container">
+
+                <!-- =========================================
+                     HERO BACKGROUND / DECORATION
+                ========================================== -->
+                <div class="hero-background" aria-hidden="true">
+                    <!-- Ambient Glows -->
+                    <span class="hero-glow hero-glow-blue"></span>
+                    <span class="hero-glow hero-glow-purple"></span>
+
+                    <!-- Background Name -->
+                    <span class="hero-bg-name">REMON</span>
+
+                    <!-- Circular Frame -->
+                    <div class="hero-circle">
+                        <span class="hero-circle-dot"></span>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                     HERO CONTENT
+                ========================================== -->
+                <div class="hero-content">
+
+                    <!-- Greeting -->
+                    <p class="hero-greeting">Hi, I'm</p>
+
+                    <!-- Name -->
+                    <h1 class="hero-title"><span class="title-word">Remon</span> <span class="title-word">Awad</span></h1>
+
+                    <!-- Role -->
+                    <h2 class="hero-role">React Front-End Developer</h2>
+
+                    <!-- Description -->
+                    <p class="hero-description">
+                        I help small businesses and startups turn their ideas into professional websites through thoughtful design and one month of post-delivery support.
+                    </p>
+
+                    <!-- =====================================
+                         HERO CTA BUTTONS
+                    ====================================== -->
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View My Work</span>
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a href="Remon's Resume.pdf" class="btn btn-secondary" download>
+                            <span>Download Résumé</span>
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3v12" />
+                                    <path d="m7 10 5 5 5-5" />
+                                    <path d="M5 21h14" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- =====================================
+                         HERO SOCIAL LINKS
+                    ====================================== -->
+                    <div class="hero-socials">
+                        <a href="https://github.com/Remon-Awad" class="social-icon" aria-label="GitHub" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 3 1.4 3.7 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.3-3.3 4.2 4.2 0 0 1 .1-3.3s1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.3-1.6 3.4-1.2 3.4-1.2a4.2 4.2 0 0 1 .1 3.3 4.6 4.6 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6 .5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/remon-awad/" class="social-icon" aria-label="LinkedIn"
+                            target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.7A1.7 1.7 0 1 1 6.5 5.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7z" />
+                            </svg>
+                        </a>
+
+
+
+                        <a href="mailto:re2006mo@gmail.com" class="social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 6-10 7L2 6" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- =========================================
+                     HERO VISUAL
+                ========================================== -->
+                <div class="hero-visual">
+
+                    <div class="hero-visual-frame">
+
+                        <div class="hero-visual-glow" aria-hidden="true"></div>
+
+                        <svg class="hero-ring" viewBox="0 0 100 100" aria-hidden="true">
+                            <circle class="hero-ring-circle" cx="50" cy="50" r="48" />
+                        </svg>
+
+                        <div class="hero-dot-grid" aria-hidden="true"></div>
+
+                        <div class="hero-portrait">
+                            <img src="./images/remon-portrait-cutout.png" alt="Remon Awad - React Front-End Developer">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             ABOUT SECTION
+        ================================================== -->
+        <section class="about section" id="about">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <h2 class="section-title">
+                        About<span> Me</span>
+                    </h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <!-- =====================================
+                         ABOUT CONTENT
+                    ====================================== -->
+                    <div class="about-content">
+                        <p class="about-text">
+                            Here's a quick look at how a curiosity about
+                            technology turned into a focus on building clean,
+                            professional web experiences.
+                        </p>
+
+                        <!-- Quick Tags -->
+                        <div class="about-tags">
+                            <span>Problem Solver</span>
+                            <span>Continuous Learner</span>
+                            <span>Client Focused</span>
+                        </div>
+                    </div>
+
+                    <!-- =====================================
+                         ABOUT TIMELINE
+                    ====================================== -->
+                    <div class="about-timeline">
+
+                        <!-- Step 01 -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <span class="timeline-index">01</span>
+                                <span class="timeline-dot"></span>
+                            </div>
+                            <div class="timeline-body">
+                                <span class="timeline-tag">Foundation</span>
+                                <h3>Computer Science</h3>
+                                <p>
+                                    Started at El Shorouk Academy, where studying
+                                    Computer Science sparked my passion for
+                                    learning and problem-solving.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Step 02 -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <span class="timeline-index">02</span>
+                                <span class="timeline-dot"></span>
+                            </div>
+                            <div class="timeline-body">
+                                <span class="timeline-tag">Discovery</span>
+                                <h3>Web Development</h3>
+                                <p>
+                                    Found the perfect mix of coding and
+                                    creativity, and decided this was the path
+                                    to focus on.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Step 03 -->
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <span class="timeline-index">03</span>
+                                <span class="timeline-dot"></span>
+                            </div>
+                            <div class="timeline-body">
+                                <span class="timeline-tag">Growth</span>
+                                <h3>DEPI React Track</h3>
+                                <p>
+                                    Joined the DEPI React Front-End Development
+                                    track, turning what I learn into hands-on
+                                    projects and real web experiences.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Step 04 — Current -->
+                        <article class="timeline-item timeline-item-current">
+                            <div class="timeline-marker">
+                                <span class="timeline-index">04</span>
+                                <span class="timeline-dot timeline-dot-live"></span>
+                            </div>
+                            <div class="timeline-body">
+                                <span class="timeline-tag">Today</span>
+                                <h3>Building Real Experiences</h3>
+                                <p>
+                                    Focused on creating professional,
+                                    user-friendly websites that bring ideas
+                                    to life.
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             EDUCATION SECTION
+        ================================================== -->
+        <section class="education section" id="education">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <p class="section-label">Academic Background</p>
+                    <h2 class="section-title">
+                        The foundation
+                        <span>behind the code.</span>
+                    </h2>
+                </div>
+
+                <!-- =========================================
+                     EDUCATION CARD
+                ========================================== -->
+                <div class="education-card">
+
+                    <!-- Institution Panel -->
+                    <div class="education-visual">
+                        <div class="education-visual-glow" aria-hidden="true"></div>
+                        <div class="education-dot-grid" aria-hidden="true"></div>
+
+                        <div class="education-logo-wrap">
+                            <div class="education-logo">
+                                <img src="./images/logo.png" alt="El Shorouk Academy logo">
+                            </div>
+                        </div>
+
+                        <span class="education-institution">El Shorouk Academy</span>
+                        <span class="education-department">Computer Science Department</span>
+                    </div>
+
+                    <!-- Details Panel -->
+                    <div class="education-info">
+
+                        <div class="education-status">
+                            <span class="status-dot"></span>
+                            <span>Currently Studying</span>
+                        </div>
+
+                        <h3>Bachelor of Computer Science</h3>
+
+                        <div class="education-meta">
+                            <span>El Shorouk Academy</span>
+                            <span class="education-meta-divider" aria-hidden="true"></span>
+                            <span>2021 — Present</span>
+                        </div>
+
+                        <p>
+                            Studying the fundamentals of computer science, from
+                            data structures and algorithms to software
+                            engineering and database design, building the
+                            analytical foundation behind everything I create
+                            on the front-end.
+                        </p>
+
+                        <!-- Coursework -->
+                        <div class="education-tags">
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                            <span>OOP</span>
+                            <span>Databases</span>
+                            <span>Software Engineering</span>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             EXPERIENCE SECTION
+        ================================================== -->
+        <section class="experience section" id="experience">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <p class="section-label">My Journey</p>
+                    <h2 class="section-title">
+                        Training &amp;
+                        <span>experience.</span>
+                    </h2>
+                </div>
+
+                <!-- =========================================
+                     EXPERIENCE TIMELINE
+                ========================================== -->
+                <div class="experience-timeline">
+
+                    <!-- 2025 -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker">
+                            <span class="timeline-index">2025</span>
+                            <span class="timeline-dot"></span>
+                        </div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag">NTI Training</span>
+                            <h3>Python Development</h3>
+                            <ul class="timeline-list">
+                                <li>Learned Python fundamentals and programming concepts.</li>
+                                <li>Built practical console-based applications.</li>
+                                <li>Applied programming logic and problem-solving techniques.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- 2026 — Current -->
+                    <article class="timeline-item timeline-item-current">
+                        <div class="timeline-marker">
+                            <span class="timeline-index">2026</span>
+                            <span class="timeline-dot timeline-dot-live"></span>
+                        </div>
+                        <div class="timeline-body">
+                            <span class="timeline-tag">DEPI</span>
+                            <h3>React Front-End Development</h3>
+                            <ul class="timeline-list">
+                                <li>Intensive training in React Front-End Development.</li>
+                                <li>Building responsive and user-focused web interfaces.</li>
+                                <li>Working with HTML, CSS, JavaScript, React and Bootstrap.</li>
+                                <li>Practicing API integration and modern front-end development.</li>
+                                <li>Building practical projects throughout the training.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+       <!-- =================================================
+     SKILLS SECTION
+================================================== -->
+<section class="skills section" id="skills">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="section-heading">
+            <p class="section-label">My Toolkit</p>
+            <h2 class="section-title">
+                Technologies I
+                <span>work with.</span>
+            </h2>
+            <p class="section-intro">
+                My main focus is Front-End Development, while my
+                programming background helps me approach problems
+                with a strong logical mindset.
+            </p>
+        </div>
+
+        <!-- =====================================
+             SKILLS GRID (Bento Cards)
+        ====================================== -->
+        <div class="skills-grid">
+
+            <!-- 01 — Frontend Development (Core Focus) -->
+            <article class="skill-card skill-card-core">
+                <div class="skill-card-header">
+                    <span class="skill-card-icon skill-card-icon-primary" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m8 6-6 6 6 6" />
+                            <path d="m16 6 6 6-6 6" />
+                        </svg>
+                    </span>
+                    <span class="skill-card-index">01</span>
+                </div>
+                <span class="skill-card-core-badge">
+                    <span class="skill-card-core-dot" aria-hidden="true"></span>
+                    Core Focus
+                </span>
+                <h3>Frontend Development</h3>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Bootstrap</span>
+                    <span>Responsive Web Design</span>
+                    <span>API Integration</span>
+                </div>
+            </article>
+
+            <!-- 02 — Programming Languages -->
+            <article class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-card-icon skill-card-icon-purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="4 17 10 11 4 5" />
+                            <line x1="12" y1="19" x2="20" y2="19" />
+                        </svg>
+                    </span>
+                    <span class="skill-card-index">02</span>
+                </div>
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span>C++</span>
+                    <span>C#</span>
+                    <span>Python</span>
+                </div>
+            </article>
+
+            <!-- 03 — Core Programming -->
+            <article class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-card-icon skill-card-icon-primary" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2 2 7l10 5 10-5-10-5z" />
+                            <path d="m2 17 10 5 10-5" />
+                            <path d="m2 12 10 5 10-5" />
+                        </svg>
+                    </span>
+                    <span class="skill-card-index">03</span>
+                </div>
+                <h3>Core Programming</h3>
+                <div class="skill-tags">
+                    <span>Object-Oriented Programming</span>
+                    <span>Data Structures</span>
+                    <span>Problem Solving</span>
+                    <span>Competitive Programming</span>
+                </div>
+            </article>
+
+            <!-- 04 — Tools -->
+            <article class="skill-card">
+                <div class="skill-card-header">
+                    <span class="skill-card-icon skill-card-icon-purple" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </span>
+                    <span class="skill-card-index">04</span>
+                </div>
+                <h3>Tools</h3>
+                <div class="skill-tags">
+                    <span>VS Code</span>
+                    <span>Git</span>
+                    <span>GitHub (Basic)</span>
+                </div>
+            </article>
+
+            <!-- 05 — Soft Skills (Wide) -->
+            <article class="skill-card skill-card-wide">
+                <div class="skill-card-header">
+                    <span class="skill-card-icon skill-card-icon-accent" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </span>
+                    <span class="skill-card-index">05</span>
+                </div>
+                <h3>Soft Skills</h3>
+                <div class="skill-tags">
+                    <span>Communication</span>
+                    <span>Teamwork</span>
+                    <span>Problem Solving</span>
+                    <span>Adaptability</span>
+                    <span>Attention to Detail</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+        <!-- =================================================
+             SERVICES SECTION
+        ================================================== -->
+        <section class="services section" id="services">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading">
+                    <p class="section-label">What Can I Do For You</p>
+                    <h2 class="section-title">
+                        How I can help
+                        <span>your business.</span>
+                    </h2>
+                </div>
+
+                <!-- =========================================
+                     SERVICES SHOWCASE
+                ========================================== -->
+                <div class="services-showcase" id="servicesShowcase">
+
+                    <!-- ---------- Services Nav ---------- -->
+                    <div class="services-nav" role="tablist" aria-label="Services" aria-orientation="vertical">
+
+                        <button class="service-tab is-active" type="button" role="tab" id="serviceTab0"
+                            aria-selected="true" aria-controls="servicePanel0" data-index="0" data-accent="primary">
+                            <span class="service-tab-index">01</span>
+                            <span class="service-tab-info">
+                                <span class="service-tab-title">Interactive Digital Menus</span>
+                                <span class="service-tab-desc">Modern digital menus designed for restaurants and cafés.</span>
+                            </span>
+                            <span class="service-tab-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </span>
+                        </button>
+
+                        <button class="service-tab" type="button" role="tab" id="serviceTab1"
+                            aria-selected="false" aria-controls="servicePanel1" data-index="1" data-accent="purple">
+                            <span class="service-tab-index">02</span>
+                            <span class="service-tab-info">
+                                <span class="service-tab-title">Interactive Event Invitations</span>
+                                <span class="service-tab-desc">Engaging digital invitations for special occasions.</span>
+                            </span>
+                            <span class="service-tab-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </span>
+                        </button>
+
+                        <button class="service-tab" type="button" role="tab" id="serviceTab2"
+                            aria-selected="false" aria-controls="servicePanel2" data-index="2" data-accent="accent">
+                            <span class="service-tab-index">03</span>
+                            <span class="service-tab-info">
+                                <span class="service-tab-title">Landing Pages</span>
+                                <span class="service-tab-desc">Focused pages built to showcase your offer.</span>
+                            </span>
+                            <span class="service-tab-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </span>
+                        </button>
+
+                        <button class="service-tab" type="button" role="tab" id="serviceTab3"
+                            aria-selected="false" aria-controls="servicePanel3" data-index="3" data-accent="success">
+                            <span class="service-tab-index">04</span>
+                            <span class="service-tab-info">
+                                <span class="service-tab-title">Digital Business Cards</span>
+                                <span class="service-tab-desc">Modern digital profiles made to share your contact information.</span>
+                            </span>
+                            <span class="service-tab-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14" />
+                                    <path d="m12 5 7 7-7 7" />
+                                </svg>
+                            </span>
+                        </button>
+                        
+
+                    </div>
+
+                    <!-- ---------- Services Preview Stage ---------- -->
+                    <div class="services-preview">
+                        <span class="services-preview-bgnum" id="servicesPreviewBgNum" aria-hidden="true">01</span>
+                        <div class="services-preview-glow" aria-hidden="true"></div>
+
+                        <div class="services-preview-stage">
+
+                            <article class="service-panel is-active" id="servicePanel0" role="tabpanel"
+                                aria-labelledby="serviceTab0" data-index="0">
+                                <div class="service-panel-media">
+                                    <img src="./images/Digital-Menu-Service.png" alt="Interactive Digital Menus">
+                                </div>
+                                <div class="service-panel-body">
+                                    <span class="service-panel-tag">Service 01</span>
+                                    <h3>Interactive Digital Menus</h3>
+                                    <p>Engaging digital menus that make it easy for customers to explore dishes, discover offers, and find what they want quickly.</p>
+                                    <div class="service-panel-tags skill-tags">
+                                        <span>Interactive Design</span>
+                                        <span>Menu Categories</span>
+                                        <span>Food Showcase</span>
+                                        <span>Easy Navigation</span>
+                                        <span>Mobile Friendly</span>
+                                    </div>
+                                    <a href="#contact" class="service-panel-cta">
+                                        <span>Let's create a menu like this</span>
+                                        <span class="btn-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14" />
+                                                <path d="m12 5 7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="service-panel" id="servicePanel1" role="tabpanel"
+                                aria-labelledby="serviceTab1" data-index="1">
+                                <div class="service-panel-media">
+                                    <img src="./images/Event-Invitation-Service.png" alt="Interactive Event Invitations">
+                                </div>
+                                <div class="service-panel-body">
+                                    <span class="service-panel-tag">Service 02</span>
+                                    <h3>Interactive Event Invitations</h3>
+                                    <p>Create memorable digital invitations with interactive design, event details, and easy sharing.</p>
+                                    <div class="service-panel-tags skill-tags">
+                                        <span>Interactive Design</span>
+                                        <span>Mobile Friendly</span>
+                                        <span>Custom Styling</span>
+                                        <span>Easy Sharing</span>
+                                        <span>Event Details</span>
+                                    </div>
+                                    <a href="#contact" class="service-panel-cta">
+                                        <span>Let's create an invitation like this</span>
+                                        <span class="btn-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14" />
+                                                <path d="m12 5 7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="service-panel" id="servicePanel2" role="tabpanel"
+                                aria-labelledby="serviceTab2" data-index="2">
+                                <div class="service-panel-media">
+                                    <img src="./images/Landing-Page-Service.png" alt="Landing Pages">
+                                </div>
+                                <div class="service-panel-body">
+                                    <span class="service-panel-tag">Service 03</span>
+                                    <h3>Landing Pages</h3>
+                                    <p>Focused landing pages that clearly present your product, service, or campaign and guide visitors toward action.</p>
+                                    <div class="service-panel-tags skill-tags">
+                                        <span>Modern UI Design</span>
+                                        <span>Responsive Design</span>
+                                        <span>Clear CTA</span>
+                                        <span>Fast Loading</span>
+                                        <span>SEO Basics</span>
+                                    </div>
+                                    <a href="#contact" class="service-panel-cta">
+                                        <span>Let's create a landing page like this</span>
+                                        <span class="btn-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14" />
+                                                <path d="m12 5 7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+
+                            <article class="service-panel" id="servicePanel3" role="tabpanel"
+                                aria-labelledby="serviceTab3" data-index="3">
+                                <div class="service-panel-media">
+                                    <img src="./images/Business-Card-Service.png" alt="Digital Business Cards">
+                                </div>
+                                <div class="service-panel-body">
+                                    <span class="service-panel-tag">Service 04</span>
+                                    <h3>Digital Business Cards</h3>
+                                    <p>Professional digital cards that bring your contact details, social links, and personal information together in one shareable page.</p>
+                                    <div class="service-panel-tags skill-tags">
+                                        <span>Custom Design</span>
+                                        <span>Contact Information</span>
+                                        <span>Social Links</span>
+                                        <span>QR Code Sharing</span>
+                                        <span>Easy Contact Saving</span>
+                                        <span>Mobile Friendly</span>
+                                    </div>
+                                    <a href="#contact" class="service-panel-cta">
+                                        <span>Let's create a card like this</span>
+                                        <span class="btn-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M5 12h14" />
+                                                <path d="m12 5 7 7-7 7" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =================================================
+             PROJECTS SECTION
+        ================================================== -->
+        <section class="projects section" id="projects">
+            <div class="container">
+
+                <!-- Section Heading -->
+                <div class="section-heading section-heading-projects">
+                    <div>
+                        <p class="section-label">Selected Work</p>
+                        <h2 class="section-title">
+                            Projects I'm
+                            <span>proud of.</span>
+                        </h2>
+                    </div>
+                    <p class="section-intro">
+                        A selection of projects where I applied my technical
+                        skills to create practical and user-friendly
+                        experiences.
+                    </p>
+                </div>
+
+                <!-- =========================================
+                     PROJECTS BENTO GRID
+                ========================================== -->
+                <div class="projects-bento">
+
+                    <!-- =====================================
+                         PROJECT 01 — BOOXERA (Featured)
+                    ====================================== -->
+                    <article class="project-card project-card-featured">
+
+                        <div class="project-image">
+                            <div class="project-browser">
+
+                                <div class="browser-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="browser-content">
+                                    <span class="browser-badge">Featured · E-Commerce</span>
+                                    <span class="browser-title">Booxera</span>
+                                    <span class="browser-subtitle">Online Bookstore</span>
+
+                                    <div class="browser-illustration wire-books" aria-hidden="true">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3>Booxera</h3>
+                                <p>
+                                    An online bookstore website designed to provide
+                                    users with a simple and intuitive browsing
+                                    experience.
+                                </p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>Live Demo</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>GitHub</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- =====================================
+                         PROJECT 02 — Business Landing Page
+                    ====================================== -->
+                    <article class="project-card project-card-secondary-a">
+
+                        <div class="project-image">
+                            <div class="project-browser">
+
+                                <div class="browser-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="browser-content browser-content-sm">
+                                    <span class="browser-badge">Business</span>
+                                    <span class="browser-title browser-title-sm">Landing Page</span>
+
+                                    <div class="browser-illustration wireframe-landing" aria-hidden="true">
+                                        <span class="wire-nav"></span>
+                                        <span class="wire-hero"></span>
+                                        <div class="wire-cards">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3>Business Landing Page</h3>
+                                <p>
+                                    A modern landing page concept designed for a
+                                    small business to establish a professional
+                                    online presence.
+                                </p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>CSS</span>
+                                    <span>Responsive</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>Live Demo</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>GitHub</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- =====================================
+                         PROJECT 03 — Restaurant Website
+                    ====================================== -->
+                    <article class="project-card project-card-secondary-b">
+
+                        <div class="project-image">
+                            <div class="project-browser">
+
+                                <div class="browser-bar">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="browser-content browser-content-sm">
+                                    <span class="browser-badge">Restaurant</span>
+                                    <span class="browser-title browser-title-sm">Menu &amp; Dine</span>
+
+                                    <div class="browser-illustration wireframe-menu" aria-hidden="true">
+                                        <div class="wire-menu-row">
+                                            <span class="wire-thumb"></span>
+                                            <span class="wire-lines"><i></i><i></i></span>
+                                            <span class="wire-price"></span>
+                                        </div>
+                                        <div class="wire-menu-row">
+                                            <span class="wire-thumb"></span>
+                                            <span class="wire-lines"><i></i><i></i></span>
+                                            <span class="wire-price"></span>
+                                        </div>
+                                        <div class="wire-menu-row">
+                                            <span class="wire-thumb"></span>
+                                            <span class="wire-lines"><i></i><i></i></span>
+                                            <span class="wire-price"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-overlay">
+                            <div class="project-overlay-content">
+                                <h3>Restaurant Website</h3>
+                                <p>
+                                    A responsive restaurant website with an
+                                    interactive menu and clear customer-focused
+                                    navigation.
+                                </p>
+                                <div class="project-tech">
+                                    <span>React</span>
+                                    <span>JavaScript</span>
+                                    <span>API</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>Live Demo</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                    <a href="#" target="_blank" rel="noopener noreferrer">
+                                        <span>GitHub</span>
+                                        <span aria-hidden="true">↗</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- =====================================
+                         MORE ON GITHUB — CTA
+                    ====================================== -->
+                    <a href="https://github.com/Remon-Awad" class="project-cta-card" target="_blank"
+                        rel="noopener noreferrer">
+                        <span class="project-cta-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 3 1.4 3.7 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.3-3.3 4.2 4.2 0 0 1 .1-3.3s1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.3-1.6 3.4-1.2 3.4-1.2a4.2 4.2 0 0 1 .1 3.3 4.6 4.6 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6 .5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z" />
+                            </svg>
+                        </span>
+                        <span class="project-cta-text">
+                            <span class="project-cta-title">More projects on GitHub</span>
+                            <span class="project-cta-desc">Browse the rest of my repositories and experiments.</span>
+                        </span>
+                        <span class="project-cta-arrow" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="m12 5 7 7-7 7" />
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =================================================
+             CTA / CONTACT SECTION
+        ================================================== -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-wrapper" id="contactWrapper">
+
+                    <!-- =====================================
+                         CONTACT CONTENT
+                    ====================================== -->
+                    <div class="contact-content">
+                        <p class="section-label">Have a project in mind?</p>
+                        <h2 class="contact-title">
+                            Let's build something
+                            <span>great together.</span>
+                        </h2>
+                        <p class="contact-description">
+                            Whether you need a business website, landing page,
+                            or a modern React interface, I'd love to hear
+                            about your idea.
+                        </p>
+
+                        <!-- Availability -->
+                        <div class="contact-availability">
+                            <span class="status-dot"></span>
+                            <span>Currently available for freelance work</span>
+                        </div>
+
+                        <!-- =================================
+                             CONTACT LINKS
+                        ================================== -->
+                        <div class="contact-links" id="contactLinks">
+
+                            <!-- Email -->
+                            <a href="mailto:re2006mo@gmail.com" class="contact-link-row" data-type="email"
+                                data-copy="re2006mo@gmail.com">
+                                <span class="contact-link-icon">
+                                    <svg class="icon-default" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2.5" y="5" width="19" height="14" rx="2.5" />
+                                        <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+                                    </svg>
+                                    <svg class="icon-success" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 6 9 17l-5-5" />
+                                    </svg>
+                                </span>
+                                <span class="contact-link-text">
+                                    <span class="contact-link-title">Email</span>
+                                    <span class="contact-link-value">re2006mo@gmail.com</span>
+                                </span>
+                                <span class="contact-link-hint">Click to copy</span>
+                                <span class="contact-link-arrow" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/in/remon-awad/" class="contact-link-row" data-type="linkedin"
+                                target="_blank" rel="noopener noreferrer">
+                                <span class="contact-link-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.7A1.7 1.7 0 1 1 6.5 5.3a1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3v-9h2.9v1.2h.1a3.2 3.2 0 0 1 2.9-1.6c3.1 0 3.7 2 3.7 4.7z" />
+                                    </svg>
+                                </span>
+                                <span class="contact-link-text">
+                                    <span class="contact-link-title">LinkedIn</span>
+                                    <span class="contact-link-value">Connect with me professionally</span>
+                                </span>
+                                <span class="contact-link-arrow" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/201226750547" class="contact-link-row" data-type="whatsapp"
+                                target="_blank" rel="noopener noreferrer">
+                                <span class="contact-link-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z" />
+                                        <path
+                                            d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.5-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2z" />
+                                    </svg>
+                                </span>
+                                <span class="contact-link-text">
+                                    <span class="contact-link-title">WhatsApp</span>
+                                    <span class="contact-link-value">Message me directly</span>
+                                </span>
+                                <span class="contact-link-arrow" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/Remon-Awad" class="contact-link-row" data-type="github" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="contact-link-icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 3 1.4 3.7 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-6a4.6 4.6 0 0 1 1.3-3.3 4.2 4.2 0 0 1 .1-3.3s1-.3 3.4 1.2a11.5 11.5 0 0 1 6.2 0c2.3-1.6 3.4-1.2 3.4-1.2a4.2 4.2 0 0 1 .1 3.3 4.6 4.6 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6 .5.4.9 1.2.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z" />
+                                    </svg>
+                                </span>
+                                <span class="contact-link-text">
+                                    <span class="contact-link-title">GitHub</span>
+                                    <span class="contact-link-value">Browse my code and repos</span>
+                                </span>
+                                <span class="contact-link-arrow" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h14" />
+                                        <path d="m12 5 7 7-7 7" />
+                                    </svg>
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- =====================================
+                         CONTACT DECORATION
+                    ====================================== -->
+                    <div class="contact-decoration" aria-hidden="true">
+                        <span class="contact-circle circle-one"></span>
+                        <span class="contact-circle circle-two"></span>
+                        <span class="contact-circle circle-three"></span>
+                        <span class="contact-star">✦</span>
+                        <span class="contact-dot contact-dot-one"></span>
+                        <span class="contact-dot contact-dot-two"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- Footer Brand -->
+            <div class="footer-brand">
+                <a href="#home" class="logo">Remon<span>.</span></a>
+                <p>React Front-End Developer</p>
+            </div>
+
+            <!-- Copyright -->
+            <p class="footer-copyright">© 2026 Remon Awad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+    <script src="script.js"></script>
+</body>
+
+</html>
