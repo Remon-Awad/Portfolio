@@ -7,7 +7,11 @@ Visual Direction:
 Dark / Futuristic / Minimal / Professional
 
 Signature typography ("Digital Atelier") is defined in
-section 22 at the end of this file.
+section 22 near the end of this file.
+
+Light Mode refinements live in section 24 (plus the palette
+in section 2). Extra responsive fixes (tablet / mobile / touch)
+live in section 25. Section 23 must stay the very last block.
 ========================================================= */
 
 /* Bodoni Moda (Didone) — used for the name and all headings.
@@ -20,6 +24,8 @@ section 22 at the end of this file.
 ========================================================= */
 
 :root {
+
+    color-scheme: dark;
 
     --color-background: #06070b;
     --color-background-soft: #090b12;
@@ -61,6 +67,13 @@ section 22 at the end of this file.
     --color-button-secondary: rgba(255, 255, 255, 0.02);
     --color-button-secondary-hover: rgba(255, 255, 255, 0.05);
 
+    /* Small uppercase labels / badges (needs a darker blue in light mode) */
+    --color-label: #3b72ff;
+
+    /* Backdrop behind images / logos (education panel, project previews) */
+    --color-media-bg: #080b13;
+    --dot-color: rgba(255, 255, 255, 0.06);
+
     --font-body: "Plus Jakarta Sans", sans-serif;
     --font-display: "Plus Jakarta Sans", sans-serif;
 
@@ -101,57 +114,70 @@ section 22 at the end of this file.
     --dot-grid-target: 0.55;
 }
 
+/* Native scrollbars / form controls follow the active theme */
+html:has(body:not(.dark-mode)) {
+    color-scheme: light;
+}
+
 
 /* =========================================================
 2. LIGHT MODE
+
+Warm "paper" palette: cream page, white elevated cards,
+deeper brand colours so text keeps WCAG AA contrast.
 ========================================================= */
 
 body:not(.dark-mode) {
 
-    --color-background: #f3f1ec;
-    --color-background-soft: #ece9e2;
-    --color-surface: #faf9f6;
-    --color-surface-soft: #f1efe9;
-    --color-surface-hover: #e8e5dd;
+    --color-background: #ece8de;
+    --color-background-soft: #e3ded2;
+    --color-surface: #f2eee5;
+    --color-surface-soft: #e9e4d9;
+    --color-surface-hover: #ded9cc;
 
-    --color-primary: #315dce;
-    --color-primary-dark: #274baa;
-    --color-primary-bright: #4774df;
-    --color-primary-soft: rgba(49, 93, 206, 0.10);
+    --color-primary: #2a56d6;
+    --color-primary-dark: #1f43b0;
+    --color-primary-bright: #3a68e4;
+    --color-primary-soft: rgba(42, 86, 214, 0.10);
 
-    --color-purple: #7651b8;
-    --color-purple-soft: rgba(118, 81, 184, 0.10);
+    --color-purple: #7048c4;
+    --color-purple-soft: rgba(112, 72, 196, 0.10);
 
-    --color-accent: #b88a1d;
-    --color-accent-soft: rgba(184, 138, 29, 0.12);
+    --color-accent: #805a04;
+    --color-accent-soft: rgba(128, 90, 4, 0.12);
 
-    --color-success: #168a61;
+    --color-success: #0c6e4d;
 
-    --color-text: #1d2430;
-    --color-text-light: #626b78;
-    --color-text-muted: #8a909a;
+    --color-text: #1b2230;
+    --color-text-light: #474e5e;
+    --color-text-muted: #565d6a;
 
-    --color-border: rgba(29, 36, 48, 0.10);
-    --color-border-strong: rgba(29, 36, 48, 0.16);
+    --color-border: rgba(40, 32, 15, 0.11);
+    --color-border-strong: rgba(40, 32, 15, 0.19);
 
-    --color-header: rgba(250, 249, 246, 0.84);
-    --color-mobile-nav: rgba(250, 249, 246, 0.97);
+    --color-header: rgba(240, 236, 227, 0.82);
+    --color-mobile-nav: rgba(240, 236, 227, 0.98);
 
-    --color-card: rgba(250, 249, 246, 0.60);
-    --color-card-soft: rgba(250, 249, 246, 0.75);
-    --color-card-hover: rgba(250, 249, 246, 0.90);
-    --color-card-solid: rgba(250, 249, 246, 0.96);
+    --color-card: rgba(252, 250, 244, 0.62);
+    --color-card-soft: rgba(252, 250, 244, 0.85);
+    --color-card-hover: rgba(255, 253, 249, 0.96);
+    --color-card-solid: #f8f5ee;
 
-    --color-button-secondary: rgba(29, 36, 48, 0.025);
-    --color-button-secondary-hover: rgba(29, 36, 48, 0.055);
+    --color-button-secondary: rgba(40, 32, 15, 0.035);
+    --color-button-secondary-hover: rgba(40, 32, 15, 0.07);
 
-    --shadow-sm: 0 8px 24px rgba(33, 38, 45, 0.08);
-    --shadow-md: 0 18px 45px rgba(33, 38, 45, 0.11);
-    --shadow-lg: 0 28px 70px rgba(33, 38, 45, 0.14);
-    --shadow-blue: 0 18px 45px rgba(49, 93, 206, 0.10);
-    --shadow-purple: 0 18px 45px rgba(118, 81, 184, 0.08);
+    --color-label: #2447b5;
 
-    --dot-grid-target: 0.3;
+    --color-media-bg: #dfe5f3;
+    --dot-color: rgba(27, 34, 48, 0.09);
+
+    --shadow-sm: 0 6px 20px rgba(60, 48, 20, 0.08), 0 1px 3px rgba(60, 48, 20, 0.06);
+    --shadow-md: 0 18px 45px rgba(60, 48, 20, 0.13);
+    --shadow-lg: 0 28px 70px rgba(60, 48, 20, 0.17);
+    --shadow-blue: 0 18px 45px rgba(42, 86, 214, 0.12);
+    --shadow-purple: 0 18px 45px rgba(112, 72, 196, 0.09);
+
+    --dot-grid-target: 0.35;
 }
 
 
@@ -245,6 +271,11 @@ button {
 
 ul {
     list-style: none;
+}
+
+::selection {
+    background: var(--color-primary);
+    color: #ffffff;
 }
 
 
@@ -519,7 +550,7 @@ ul {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--color-primary-bright);
+    color: var(--color-label);
 }
 
 .section-title {
@@ -1003,7 +1034,7 @@ body.hero-ready .hero-bg-name {
 }
 
 body:not(.dark-mode) .hero-bg-name {
-    -webkit-text-stroke-color: rgba(49, 93, 206, 0.14);
+    -webkit-text-stroke-color: rgba(42, 86, 214, 0.14);
 }
 
 @keyframes heroNameDrift {
@@ -1157,6 +1188,14 @@ body.hero-ready .hero-socials {
     aspect-ratio: 620 / 700;
 }
 
+/* Laptop / tablet: push the portrait + ring down so the head
+   never touches the fixed header. Mobile keeps its own spacing. */
+@media screen and (min-width: 701px) {
+    .hero-visual-frame {
+        top: clamp(70px, 12vh, 104px);
+    }
+}
+
 .hero-visual-glow {
     position: absolute;
     left: 50%;
@@ -1225,7 +1264,7 @@ body.hero-ready .hero-dot-grid {
 }
 
 body:not(.dark-mode) .hero-dot-grid {
-    background-image: radial-gradient(rgba(49, 93, 206, 0.20) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(42, 86, 214, 0.20) 1px, transparent 1px);
 }
 
 .hero-portrait {
@@ -1247,6 +1286,14 @@ body.hero-ready .hero-portrait {
     to { clip-path: inset(0 0 0% 0); }
 }
 
+/*
+ * Bottom edge = the ring. The mask ellipse radius (40.2% x 35.4% of the
+ * image) equals the ring's radius (230px of the 620px frame), with a
+ * hard 0.4% anti-alias edge, so the picture ends exactly on the ring line
+ * instead of fading out. The top half is unmasked so the head and cap can
+ * rise above the circle.
+ */
+
 .hero-portrait img {
     width: 100%;
     height: 100%;
@@ -1254,10 +1301,10 @@ body.hero-ready .hero-portrait {
     object-position: top center;
     -webkit-mask-image:
         linear-gradient(to bottom, black 0%, black 57.1%, transparent 57.1%),
-        radial-gradient(ellipse 42.1% 37% at 50% 57.1%, black 88%, transparent 100%);
+        radial-gradient(ellipse 40.2% 35.4% at 50% 57.1%, black 99.6%, transparent 100%);
     mask-image:
         linear-gradient(to bottom, black 0%, black 57.1%, transparent 57.1%),
-        radial-gradient(ellipse 42.1% 37% at 50% 57.1%, black 88%, transparent 100%);
+        radial-gradient(ellipse 40.2% 35.4% at 50% 57.1%, black 99.6%, transparent 100%);
 }
 
 
@@ -1517,7 +1564,7 @@ badge (Education) and the availability line (Contact).
     text-align: center;
     background:
         radial-gradient(circle at 50% 30%, rgba(43, 98, 246, 0.16), transparent 62%),
-        #080b13;
+        var(--color-media-bg);
 }
 
 .education-visual::before {
@@ -1543,7 +1590,7 @@ badge (Education) and the availability line (Contact).
 .education-dot-grid {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
     background-size: 18px 18px;
     -webkit-mask-image: radial-gradient(circle at 50% 35%, black, transparent 70%);
     mask-image: radial-gradient(circle at 50% 35%, black, transparent 70%);
@@ -2084,8 +2131,7 @@ badge (Education) and the availability line (Contact).
 
 .projects-bento {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 220px 220px 132px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
 }
 
@@ -2095,6 +2141,8 @@ badge (Education) and the availability line (Contact).
     --project-accent-shadow: rgba(43, 98, 246, 0.16);
 
     position: relative;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -2105,24 +2153,13 @@ badge (Education) and the availability line (Contact).
         transform var(--transition-base);
 }
 
-.project-card-featured {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-
-.project-card-secondary-a {
-    grid-column: 3 / 5;
-    grid-row: 1 / 2;
-
+.project-card-purple {
     --project-accent: var(--color-purple);
     --project-accent-soft: var(--color-purple-soft);
     --project-accent-shadow: rgba(138, 43, 226, 0.16);
 }
 
-.project-card-secondary-b {
-    grid-column: 3 / 5;
-    grid-row: 2 / 3;
-
+.project-card-gold {
     --project-accent: var(--color-accent);
     --project-accent-soft: var(--color-accent-soft);
     --project-accent-shadow: rgba(244, 201, 93, 0.18);
@@ -2149,31 +2186,53 @@ badge (Education) and the availability line (Contact).
     width: 100%;
 }
 
-.project-image {
+/*
+ * A single project fills the whole row (image beside the text).
+ * As soon as a second project is added, the grid becomes two
+ * equal cards side by side automatically.
+ */
+
+.projects-bento > .project-card:only-of-type {
+    grid-column: 1 / -1;
+    flex-direction: row;
+}
+
+/* ---------- Image ---------- */
+
+.project-media {
     position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1.75rem;
     overflow: hidden;
     background:
         radial-gradient(circle at 50% 50%, var(--project-accent-soft), transparent 62%),
-        #080b13;
+        var(--color-media-bg);
 }
 
-.project-image::before {
+.project-media::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, var(--project-accent-soft), transparent 40%, rgba(138, 43, 226, 0.06));
+    pointer-events: none;
+}
+
+.projects-bento > .project-card:only-of-type .project-media {
+    flex: 0 0 56%;
+    padding: 2.25rem;
+}
+
+.project-media:focus-visible {
+    outline: 2px solid var(--project-accent);
+    outline-offset: -4px;
 }
 
 .project-browser {
     position: relative;
     z-index: 2;
-    width: 92%;
+    width: 100%;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
@@ -2206,228 +2265,128 @@ badge (Education) and the availability line (Contact).
 .browser-bar span:nth-child(2) { background-color: #f4c95d; }
 .browser-bar span:nth-child(3) { background-color: #34d399; }
 
-.browser-content {
-    position: relative;
-    min-height: 205px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    padding: 1.5rem 1.5rem 1.75rem;
-    overflow: hidden;
-    background: linear-gradient(145deg, #f8fafc, #edf2f7);
-}
-
-.browser-content::before {
-    content: "";
-    position: absolute;
-    inset: 20px;
-    border: 1px dashed rgba(43, 98, 246, 0.16);
-    border-radius: 12px;
-}
-
-.browser-content-sm {
-    min-height: 128px;
-    gap: 0.3rem;
-    padding: 1.1rem 1.25rem 1.25rem;
-}
-
-.browser-title {
-    position: relative;
-    z-index: 2;
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.05em;
-    color: #12151d;
-}
-
-.browser-title-sm {
-    font-size: 1.2rem;
-}
-
-.browser-subtitle {
-    position: relative;
-    z-index: 2;
-    font-size: var(--text-sm);
-    color: #687184;
-}
-
-.browser-badge {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 3;
-    padding: 0.3rem 0.55rem;
-    border-radius: 999px;
-    background: var(--project-accent-soft);
-    color: var(--project-accent);
-    font-size: 0.65rem;
-    font-weight: 700;
-}
-
-body:not(.dark-mode) .browser-badge {
-    color: #12151d;
-}
-
-.browser-illustration {
-    position: relative;
-    z-index: 2;
+.project-browser img {
     width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    background-color: #12151d;
 }
 
-.wire-books {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
-    margin-top: 6px;
-}
-
-.wire-books span {
-    aspect-ratio: 2 / 3;
-    border-radius: 4px;
-    background: var(--project-accent-soft);
-    border: 1px solid var(--project-accent);
-    opacity: 0.55;
-}
-
-.wire-books span:nth-child(2) { opacity: 0.75; }
-.wire-books span:nth-child(3) { opacity: 1; }
-.wire-books span:nth-child(4) { opacity: 0.75; }
-.wire-books span:nth-child(5) { opacity: 0.55; }
-
-.wireframe-landing {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.wire-nav {
-    display: block;
-    width: 38%;
-    height: 6px;
-    border-radius: 4px;
-    background: rgba(18, 21, 29, 0.14);
-}
-
-.wire-hero {
-    display: block;
-    height: 30px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, var(--project-accent-soft), transparent);
-    border: 1px dashed var(--project-accent);
-}
-
-.wire-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-}
-
-.wire-cards span {
-    height: 20px;
-    border-radius: 6px;
-    background: #eef1f6;
-    border: 1px solid rgba(18, 21, 29, 0.06);
-}
-
-.wireframe-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.wire-menu-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.wire-thumb {
-    width: 22px;
-    height: 22px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--project-accent-soft);
-    border: 1px solid var(--project-accent);
-}
-
-.wire-lines {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.wire-lines i {
-    display: block;
-    height: 5px;
-    border-radius: 999px;
-    background: #e3e7ee;
-    font-style: normal;
-}
-
-.wire-lines i:nth-child(1) { width: 68%; }
-.wire-lines i:nth-child(2) { width: 42%; }
-
-.wire-price {
-    width: 28px;
-    height: 8px;
-    flex-shrink: 0;
-    border-radius: 999px;
-    background: var(--project-accent-soft);
-    border: 1px solid var(--project-accent);
-}
-
-.project-overlay {
+.project-media-chip {
     position: absolute;
-    inset: 0;
-    z-index: 4;
-    display: flex;
-    align-items: flex-end;
-    padding: 1.5rem;
-    background: linear-gradient(180deg, transparent 0%, rgba(6, 7, 11, 0.35) 35%, rgba(6, 7, 11, 0.94) 100%);
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: rgba(6, 7, 11, 0.78);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--color-white);
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(6px);
     transition: opacity var(--transition-base), transform var(--transition-base);
-    pointer-events: none;
 }
 
-.project-card:hover .project-overlay,
-.project-card.is-active .project-overlay {
+.project-media:hover .project-media-chip,
+.project-media:focus-visible .project-media-chip {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
-.project-overlay-content {
-    width: 100%;
+/* ---------- Text ---------- */
+
+.project-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding: 1.9rem;
 }
 
-.project-overlay-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: var(--text-xl);
-    letter-spacing: -0.02em;
-    color: var(--color-white);
+.projects-bento > .project-card:only-of-type .project-body {
+    justify-content: center;
+    padding: 2.5rem;
 }
 
-.project-overlay-content p {
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.7rem;
     margin-bottom: 1rem;
+}
+
+.project-badge {
+    display: inline-flex;
+    padding: 0.32rem 0.75rem;
+    border: 1px solid var(--project-accent);
+    border-radius: 999px;
+    background: var(--project-accent-soft);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--project-accent);
+}
+
+.project-type {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.project-body h3 {
+    margin-bottom: 0.7rem;
+    font-size: var(--text-2xl);
+    letter-spacing: -0.02em;
+}
+
+.project-body > p {
+    max-width: 520px;
+    margin-bottom: 1.1rem;
     font-size: var(--text-sm);
-    color: rgba(245, 247, 251, 0.72);
+    color: var(--color-text-light);
+    line-height: 1.75;
+}
+
+.project-features {
+    display: grid;
+    gap: 0.45rem;
+    margin-bottom: 1.4rem;
+}
+
+.project-features li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: var(--text-sm);
+    color: var(--color-text-light);
     line-height: 1.65;
 }
 
-.project-card-featured .project-overlay-content p {
-    max-width: 420px;
+.project-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--project-accent);
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.6rem;
 }
 
 .project-tech span,
@@ -2442,12 +2401,6 @@ body:not(.dark-mode) .browser-badge {
     color: var(--color-text-light);
 }
 
-.project-overlay .project-tech span {
-    border-color: rgba(255, 255, 255, 0.14);
-    background: rgba(255, 255, 255, 0.06);
-    color: rgba(245, 247, 251, 0.85);
-}
-
 .project-tech span:hover,
 .skill-tags span:hover,
 .education-tags span:hover {
@@ -2456,34 +2409,28 @@ body:not(.dark-mode) .browser-badge {
     color: var(--color-text);
 }
 
+/* Both links are always visible, so they also work on touch screens. */
+
 .project-links {
     display: flex;
-    gap: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
 }
 
-.project-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: var(--text-sm);
-    font-weight: 700;
-    color: var(--project-accent, var(--color-primary-bright));
-    transition: gap var(--transition-fast), color var(--transition-fast);
-}
-
-.project-links a:hover {
-    gap: 0.65rem;
-    color: var(--color-white);
+.project-links .btn {
+    min-height: 46px;
+    gap: 0.5rem;
 }
 
 .project-cta-card {
-    grid-column: 1 / 5;
-    grid-row: 3 / 4;
+    grid-column: 1 / -1;
     position: relative;
     display: flex;
     align-items: center;
     gap: 1.1rem;
-    padding: 0 1.75rem;
+    min-height: 96px;
+    padding: 1.25rem 1.75rem;
     overflow: hidden;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -2748,11 +2695,6 @@ body:not(.dark-mode) .browser-badge {
     box-shadow: var(--shadow-blue);
 }
 
-.skill-card-core::before {
-    width: 100%;
-    opacity: 0.9;
-}
-
 .skill-card-core:hover {
     border-color: rgba(43, 98, 246, 0.45);
     background: linear-gradient(165deg, var(--color-primary-soft) 0%, var(--color-card-hover) 65%);
@@ -2763,33 +2705,13 @@ body:not(.dark-mode) .browser-badge {
     box-shadow: 0 0 0 1px rgba(43, 98, 246, 0.18), 0 0 22px rgba(43, 98, 246, 0.28);
 }
 
-.skill-card-core-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.9rem;
-    padding: 0.32rem 0.75rem;
-    border: 1px solid rgba(43, 98, 246, 0.3);
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--color-primary-soft), var(--color-purple-soft));
-    font-size: var(--text-xs);
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-primary-bright);
-}
-
-.skill-card-core-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-purple));
-    box-shadow: 0 0 0 4px var(--color-primary-soft);
-}
 
 
 /* =========================================================
 15. CONTACT
+
+Dark by default (hard-coded dark gradient + white text below).
+In Light Mode the whole card is re-themed in section 24.
 ========================================================= */
 
 .contact {
@@ -3174,20 +3096,31 @@ body:not(.dark-mode) .browser-badge {
         gap: 0;
     }
 
+    /*
+     * Full-screen mobile menu.
+     * - 100dvh follows the real visible height on phones (the
+     *   address bar no longer cuts the bottom of the menu).
+     * - On short screens the list scrolls instead of being cut;
+     *   the auto margins on the first / last item keep it
+     *   vertically centred when it fits.
+     */
     .nav-links {
         position: fixed;
         top: 68px;
         left: 0;
         width: 100%;
         height: calc(100vh - 68px);
+        height: calc(100dvh - 68px);
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: stretch;
         gap: 0;
         margin: 0;
         padding: 1.5rem 8%;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         border: none;
         border-top: 1px solid var(--color-border-strong);
         border-radius: 0;
@@ -3204,6 +3137,14 @@ body:not(.dark-mode) .browser-badge {
             opacity 0.45s ease,
             visibility 0.45s ease,
             transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-links li:first-child {
+        margin-top: auto;
+    }
+
+    .nav-links li:last-child {
+        margin-bottom: auto;
     }
 
     .nav-links::before {
@@ -3391,26 +3332,19 @@ body:not(.dark-mode) .browser-badge {
 
     .projects-bento {
         grid-template-columns: 1fr;
-        grid-template-rows: none;
-        grid-auto-rows: auto;
     }
 
-    .project-card-featured,
-    .project-card-secondary-a,
-    .project-card-secondary-b {
-        grid-column: 1 / 2;
-        grid-row: auto;
-        height: 300px;
+    .projects-bento > .project-card:only-of-type {
+        flex-direction: column;
     }
 
-    .project-card-featured {
-        height: 380px;
+    .projects-bento > .project-card:only-of-type .project-media {
+        flex: 0 0 auto;
+        padding: 1.75rem;
     }
 
-    .project-cta-card {
-        grid-column: 1 / 2;
-        grid-row: auto;
-        height: 96px;
+    .projects-bento > .project-card:only-of-type .project-body {
+        padding: 1.9rem;
     }
 
     .contact-wrapper {
@@ -3594,36 +3528,27 @@ body:not(.dark-mode) .browser-badge {
         gap: 1rem;
     }
 
-    .project-card-featured,
-    .project-card-secondary-a,
-    .project-card-secondary-b {
-        height: 280px;
+    .project-media,
+    .projects-bento > .project-card:only-of-type .project-media {
+        padding: 1.25rem;
     }
 
-    .project-card-featured {
-        height: 320px;
+    .project-body,
+    .projects-bento > .project-card:only-of-type .project-body {
+        padding: 1.5rem;
+    }
+
+    .project-links .btn {
+        flex: 1 1 140px;
     }
 
     .project-cta-card {
-        height: auto;
         padding: 1.1rem 1.25rem;
         flex-wrap: wrap;
     }
 
     .project-cta-desc {
         white-space: normal;
-    }
-
-    .project-overlay {
-        opacity: 1;
-        transform: none;
-        pointer-events: auto;
-        padding: 1.25rem;
-        background: linear-gradient(180deg, transparent 0%, rgba(6, 7, 11, 0.55) 40%, rgba(6, 7, 11, 0.96) 100%);
-    }
-
-    .project-overlay-content p {
-        margin-bottom: 0.75rem;
     }
 
     .skills-grid {
@@ -3757,16 +3682,6 @@ body:not(.dark-mode) .browser-badge {
         font-size: var(--text-xl);
     }
 
-    .project-card-featured,
-    .project-card-secondary-a,
-    .project-card-secondary-b {
-        height: 260px;
-    }
-
-    .project-card-featured {
-        height: 300px;
-    }
-
     .preloader-content {
         width: 86%;
     }
@@ -3858,12 +3773,11 @@ letter of the hero name in <span class="char"> and adds
 .education-info h3,
 .service-panel-body h3,
 .skill-card h3,
-.project-overlay-content h3,
+.project-body h3,
 .education-institution,
 .service-tab-title,
 .project-cta-title,
-.contact-link-title,
-.browser-title {
+.contact-link-title {
     font-family: var(--font-display);
     font-optical-sizing: auto;
     letter-spacing: -0.01em;
@@ -3907,7 +3821,7 @@ letter of the hero name in <span class="char"> and adds
 .education-info h3,
 .service-panel-body h3,
 .skill-card h3,
-.project-overlay-content h3 {
+.project-body h3 {
     font-weight: 600;
 }
 
@@ -3916,12 +3830,6 @@ letter of the hero name in <span class="char"> and adds
 .project-cta-title,
 .contact-link-title {
     font-weight: 600;
-}
-
-.browser-title {
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: -0.01em;
 }
 
 
@@ -4199,6 +4107,837 @@ body.hero-ready .hero-title.is-split .char {
         animation: none;
     }
 }
+
+
+/* =========================================================
+24. LIGHT MODE REFINEMENTS
+
+Everything below only applies when the page is NOT in dark
+mode. The palette itself lives in section 2; this block fixes
+the places where the original design had dark-only values
+hard-coded (hover text, glows, shadows, rings, card elevation).
+
+Resting card elevation uses :where() so its specificity is 0
+and the existing :hover / is-active shadows still win.
+========================================================= */
+
+/* ---------- Cards: soft elevation on the cream background ---------- */
+
+:where(body:not(.dark-mode)) .education-card,
+:where(body:not(.dark-mode)) .skill-card:not(.skill-card-core),
+:where(body:not(.dark-mode)) .service-tab,
+:where(body:not(.dark-mode)) .services-preview,
+:where(body:not(.dark-mode)) .project-card,
+:where(body:not(.dark-mode)) .project-cta-card {
+    box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Navbar "Let's Talk": white hover text was invisible ---------- */
+
+body:not(.dark-mode) .nav-cta:hover {
+    color: var(--color-primary-dark);
+    background: var(--color-primary-soft);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 22px rgba(42, 86, 214, 0.16);
+}
+
+/* ---------- Hero ---------- */
+
+body:not(.dark-mode) .hero-visual-glow {
+    background: radial-gradient(
+        circle,
+        rgba(58, 104, 228, 0.16) 0%,
+        rgba(112, 72, 196, 0.10) 45%,
+        transparent 72%
+    );
+}
+
+body:not(.dark-mode) .hero-ring-circle {
+    stroke: rgba(42, 86, 214, 0.38);
+    filter: none;
+}
+
+body:not(.dark-mode) .hero-circle {
+    border-color: rgba(42, 86, 214, 0.14);
+}
+
+body:not(.dark-mode) .hero-circle::before {
+    border-color: rgba(112, 72, 196, 0.16);
+}
+
+body:not(.dark-mode) .hero-bg-name {
+    -webkit-text-stroke-color: rgba(42, 86, 214, 0.18);
+}
+
+body:not(.dark-mode) .hero-title.is-split .char:hover {
+    text-shadow: 0 0 14px rgba(42, 86, 214, 0.28);
+}
+
+/* ---------- Education ---------- */
+
+body:not(.dark-mode) .education-logo-wrap::before {
+    border-color: rgba(42, 86, 214, 0.28);
+    box-shadow:
+        0 0 40px rgba(42, 86, 214, 0.10),
+        inset 0 0 30px rgba(42, 86, 214, 0.05);
+}
+
+body:not(.dark-mode) .education-logo-wrap::after {
+    border-color: rgba(148, 106, 6, 0.42);
+}
+
+body:not(.dark-mode) .education-logo {
+    border-color: rgba(22, 28, 39, 0.08);
+    box-shadow: 0 16px 36px rgba(33, 38, 45, 0.16);
+}
+
+body:not(.dark-mode) .education-status {
+    border-color: rgba(15, 122, 85, 0.28);
+    background: rgba(15, 122, 85, 0.08);
+}
+
+/* ---------- Services ---------- */
+
+body:not(.dark-mode) .service-tab.is-active {
+    box-shadow: 0 14px 34px rgba(33, 38, 45, 0.10);
+}
+
+body:not(.dark-mode) .service-panel-media {
+    box-shadow: 0 18px 40px rgba(33, 38, 45, 0.16);
+}
+
+body:not(.dark-mode) .services-preview-bgnum {
+    opacity: 1;
+}
+
+/* ---------- Projects ---------- */
+
+body:not(.dark-mode) .project-browser {
+    border-color: rgba(22, 28, 39, 0.12);
+    box-shadow: 0 22px 50px rgba(33, 38, 45, 0.20);
+}
+
+body:not(.dark-mode) .project-cta-card::before {
+    background: linear-gradient(115deg, transparent 30%, rgba(42, 86, 214, 0.06) 50%, transparent 70%);
+}
+
+/* ---------- Atmosphere: soft colour washes instead of flat cream ---------- */
+
+body:not(.dark-mode) {
+    background:
+        radial-gradient(900px circle at 92% 0%, rgba(58, 104, 228, 0.13), transparent 55%),
+        radial-gradient(800px circle at 0% 40%, rgba(112, 72, 196, 0.08), transparent 55%),
+        radial-gradient(800px circle at 100% 85%, rgba(176, 130, 30, 0.10), transparent 55%),
+        var(--color-background);
+}
+
+body:not(.dark-mode) .education,
+body:not(.dark-mode) .skills {
+    background: transparent;
+}
+
+body:not(.dark-mode) .about {
+    background:
+        radial-gradient(700px circle at 90% 10%, rgba(58, 104, 228, 0.10), transparent 60%),
+        rgba(255, 251, 242, 0.38);
+}
+
+body:not(.dark-mode) .experience {
+    background:
+        radial-gradient(700px circle at 8% 85%, rgba(176, 130, 30, 0.12), transparent 60%),
+        rgba(255, 251, 242, 0.38);
+}
+
+body:not(.dark-mode) .services {
+    background:
+        radial-gradient(700px circle at 85% 90%, rgba(112, 72, 196, 0.10), transparent 60%),
+        radial-gradient(600px circle at 5% 5%, rgba(58, 104, 228, 0.08), transparent 60%),
+        rgba(255, 251, 242, 0.38);
+}
+
+body:not(.dark-mode) .projects {
+    background:
+        radial-gradient(700px circle at 5% 0%, rgba(58, 104, 228, 0.09), transparent 60%),
+        radial-gradient(700px circle at 100% 100%, rgba(176, 130, 30, 0.10), transparent 60%),
+        rgba(255, 251, 242, 0.45);
+}
+
+body:not(.dark-mode) .footer {
+    background: var(--color-background-soft);
+}
+
+/* ---------- Contact: light version of the closing card ---------- */
+
+body:not(.dark-mode) .contact-wrapper {
+    color: var(--color-text);
+    border-color: rgba(42, 86, 214, 0.18);
+    background:
+        radial-gradient(520px circle at 100% 0%, rgba(58, 104, 228, 0.16), transparent 60%),
+        radial-gradient(480px circle at 0% 100%, rgba(176, 130, 30, 0.14), transparent 60%),
+        linear-gradient(120deg, #f4f1ea 0%, #eef0f8 55%, #f1ecf6 100%);
+    box-shadow: 0 26px 60px rgba(60, 48, 20, 0.14);
+}
+
+body:not(.dark-mode) .contact-wrapper::before {
+    background: radial-gradient(
+        480px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(58, 104, 228, 0.12),
+        transparent 60%
+    );
+}
+
+body:not(.dark-mode) .contact-wrapper::after {
+    background: radial-gradient(circle, rgba(58, 104, 228, 0.16), transparent 65%);
+}
+
+body:not(.dark-mode) .contact .section-label {
+    color: var(--color-label);
+}
+
+body:not(.dark-mode) .contact-title span {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body:not(.dark-mode) .contact-description,
+body:not(.dark-mode) .contact-availability {
+    color: var(--color-text-light);
+}
+
+body:not(.dark-mode) .contact-link-row {
+    border-color: var(--color-border-strong);
+    background: rgba(255, 253, 249, 0.62);
+}
+
+body:not(.dark-mode) .contact-link-row::before {
+    background: linear-gradient(115deg, transparent 30%, rgba(42, 86, 214, 0.08) 50%, transparent 70%);
+}
+
+body:not(.dark-mode) .contact-link-row:hover {
+    border-color: rgba(42, 86, 214, 0.4);
+    background: rgba(255, 253, 249, 0.95);
+    box-shadow: 0 10px 26px rgba(42, 56, 110, 0.10);
+}
+
+body:not(.dark-mode) .contact-link-icon {
+    background: rgba(42, 86, 214, 0.08);
+    border-color: rgba(42, 86, 214, 0.2);
+    color: var(--color-primary-dark);
+}
+
+body:not(.dark-mode) .contact-link-row:hover .contact-link-icon {
+    background: rgba(42, 86, 214, 0.14);
+    border-color: rgba(42, 86, 214, 0.4);
+}
+
+body:not(.dark-mode) .contact-link-title {
+    color: var(--color-text);
+}
+
+body:not(.dark-mode) .contact-link-value {
+    color: var(--color-text-light);
+}
+
+body:not(.dark-mode) .contact-link-hint {
+    color: var(--color-text-muted);
+}
+
+body:not(.dark-mode) .contact-link-arrow {
+    color: var(--color-text-light);
+    background: rgba(40, 32, 15, 0.04);
+    border-color: var(--color-border);
+}
+
+body:not(.dark-mode) .contact-link-row:hover .contact-link-arrow {
+    color: var(--color-primary-dark);
+    background: var(--color-primary-soft);
+    border-color: rgba(42, 86, 214, 0.4);
+}
+
+body:not(.dark-mode) .contact-circle {
+    border-color: rgba(42, 86, 214, 0.14);
+}
+
+body:not(.dark-mode) .contact-circle.circle-three {
+    border-color: rgba(112, 72, 196, 0.2);
+}
+
+body:not(.dark-mode) .contact-star {
+    color: var(--color-accent);
+    opacity: 0.85;
+}
+
+
+/* =========================================================
+25. RESPONSIVE FIXES — TABLET / MOBILE / TOUCH
+
+Placed after sections 18–22 and 24 on purpose: it overrides
+them by order. It only fixes layout problems found on
+tablets, phones and touch screens; the desktop design is
+unchanged. (The full-screen mobile menu fixes live directly
+inside section 18.)
+========================================================= */
+
+/* ---------- Global safety nets ---------- */
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+.hero-role,
+.section-title,
+.contact-title {
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------------------------------------------------------
+   25.1 TABLET + MOBILE (<= 1000px)
+--------------------------------------------------------- */
+
+@media screen and (max-width: 1000px) {
+
+    /* Comfortable touch targets for the header buttons */
+    .theme-toggle,
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* Short phones / landscape: tighter menu rows */
+@media screen and (max-width: 1000px) and (max-height: 700px) {
+
+    .nav-link {
+        padding: 0.8rem 0.1rem;
+        font-size: var(--text-xl);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.2 TABLET (<= 900px) — hero stacks and centers,
+        About becomes a single column
+--------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+
+    .hero {
+        min-height: auto;
+        padding: 125px 0 70px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-description {
+        max-width: 560px;
+    }
+
+    .hero-buttons,
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 0;
+    }
+
+    .hero-visual-frame {
+        top: 0;
+        width: min(460px, 82vw);
+    }
+
+    /*
+     * Background name: truly centered. The original animation
+     * ended on `translateY(-50%)` only, which cancelled the
+     * horizontal centering on small screens.
+     */
+    .hero-bg-name {
+        left: 50%;
+        font-size: clamp(3.4rem, 17vw, 8rem);
+    }
+
+    body.hero-ready .hero-bg-name {
+        animation:
+            heroBgNameInCentered 1.2s 0s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+            heroNameDriftCentered 14s 1.2s ease-in-out infinite;
+    }
+
+    @keyframes heroBgNameInCentered {
+        from { opacity: 0; transform: translate(-50%, -50%) scale(0.85); }
+        to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    }
+
+    @keyframes heroNameDriftCentered {
+        0%, 100% { transform: translate(-50%, -50%); }
+        50%      { transform: translate(-50%, -50%) translateY(1.5%); }
+    }
+
+    .hero-circle {
+        right: -30%;
+    }
+
+    /* About: single column, the card is no longer sticky */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content {
+        position: static;
+        max-width: 100%;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.3 TABLET ONLY (601px – 1000px)
+--------------------------------------------------------- */
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+
+    /* Services: 2 x 2 tab grid instead of a tall list */
+    .services-nav {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .service-tab {
+        align-items: flex-start;
+    }
+
+    .service-tab:hover {
+        transform: translateY(-3px);
+    }
+
+    .service-tab-desc {
+        white-space: normal;
+    }
+
+    .service-tab-arrow {
+        display: none;
+    }
+
+    /* Services: image beside the text instead of a giant poster */
+    .service-panel {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 1.75rem;
+        align-items: center;
+    }
+
+    .service-panel-media {
+        aspect-ratio: 1 / 1;
+        height: auto;
+        min-height: 0;
+    }
+
+    .services-preview-stage {
+        min-height: 420px;
+    }
+
+    /*
+     * Skills: 2 columns with no empty gaps —
+     * Core (full row) / 02 | 03 / 04 | 05
+     */
+    .skill-card-core {
+        grid-column: span 2;
+    }
+
+    .skill-card-wide {
+        grid-column: span 1;
+    }
+
+    .project-body > p {
+        max-width: 100%;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.4 MOBILE (<= 600px)
+--------------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+
+    /* Services: single column, wide image */
+    .service-panel {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+    }
+
+    .service-panel-media {
+        aspect-ratio: 6 / 5;
+        height: auto;
+        min-height: 0;
+    }
+
+    .services-preview {
+        padding: 1.1rem;
+    }
+
+    .services-preview-stage {
+        min-height: 0;
+    }
+
+    .service-panel-tags {
+        margin-bottom: 1.1rem;
+    }
+
+    .service-tab-arrow {
+        display: none;
+    }
+
+    /* Skills */
+    .skill-card-core {
+        grid-column: span 1;
+    }
+
+    /* Projects: no 3D tilt on small screens */
+    .project-browser,
+    .project-card:hover .project-browser {
+        transform: none;
+    }
+
+    /* Education / experience */
+    .education-meta {
+        flex-wrap: wrap;
+    }
+
+    .education-card:hover,
+    .skill-card:hover {
+        transform: none;
+    }
+
+    /* Contact */
+    .contact-link-value {
+        font-size: 0.7rem;
+    }
+
+    .contact-star {
+        display: none;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.5 SMALL PHONES (<= 380px)
+--------------------------------------------------------- */
+
+@media screen and (max-width: 380px) {
+
+    .logo {
+        font-size: 1.05rem;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-role {
+        font-size: 1.85rem;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+    }
+
+    .contact-wrapper {
+        padding: 2rem 1.25rem;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+    }
+
+    .project-body,
+    .projects-bento > .project-card:only-of-type .project-body {
+        padding: 1.25rem;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.6 LANDSCAPE PHONES (short screens)
+--------------------------------------------------------- */
+
+@media screen and (max-height: 520px) and (orientation: landscape) {
+
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   25.7 TOUCH DEVICES — no hover available
+--------------------------------------------------------- */
+
+@media (hover: none) {
+
+    /* "View live" chip is always visible, since there is no hover */
+    .project-media-chip {
+        opacity: 1;
+        transform: none;
+    }
+
+    /* Contact hint ("Opens Gmail") is useless without hover */
+    .contact-link-hint {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   26. LANGUAGE TOGGLE — BUTTON + ARABIC (RTL) STYLES
+
+   Everything under html[lang="ar"] /
+   html[dir="rtl"] only applies in Arabic mode, so the English
+   design is untouched.
+   ========================================================= */
+
+
+/* ---------- Toggle button (same look as the theme toggle) ---------- */
+
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--color-text-light);
+    background-color: var(--color-button-secondary);
+    border: 1px solid var(--color-border);
+    font-family: "Cairo", "Plus Jakarta Sans", sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast),
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.lang-toggle[data-target="en"] {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+.lang-toggle:hover {
+    transform: rotate(12deg);
+    color: var(--color-text);
+    background-color: var(--color-primary-soft);
+    border-color: rgba(43, 98, 246, 0.3);
+}
+
+@media screen and (max-width: 1000px) {
+    .lang-toggle {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+/* =========================================================
+   ARABIC TYPOGRAPHY
+   ========================================================= */
+
+html[lang="ar"] {
+    --font-body: "Cairo", "Plus Jakarta Sans", sans-serif;
+    --font-display: "Cairo", "Plus Jakarta Sans", sans-serif;
+}
+
+/* Arabic letters must stay connected: no letter-spacing
+   (the English name / logo keep theirs). */
+html[lang="ar"] *:not(.logo):not(.hero-title):not(.hero-title *):not(.hero-bg-name):not(.preloader-logo) {
+    letter-spacing: normal !important;
+}
+
+/* No fake italics on Arabic */
+html[lang="ar"] .section-title span,
+html[lang="ar"] .contact-title span,
+html[lang="ar"] .preloader-welcome-accent,
+html[lang="ar"] .hero-greeting,
+html[lang="ar"] .timeline-index,
+html[lang="ar"] .skill-card-index,
+html[lang="ar"] .service-tab-index,
+html[lang="ar"] .nav-link::before,
+html[lang="ar"] .services-preview-bgnum {
+    font-style: normal;
+}
+
+/* The job title stays English, so it keeps the Didone italic */
+html[lang="ar"] .hero-role {
+    font-family: var(--font-signature);
+}
+
+/* Arabic needs more line height than Latin headings */
+html[lang="ar"] .section-title,
+html[lang="ar"] .contact-title {
+    line-height: 1.4;
+}
+
+html[lang="ar"] .hero-greeting {
+    font-size: 1.25rem;
+}
+
+html[lang="ar"] .preloader-welcome-main {
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RTL LAYOUT
+   ========================================================= */
+
+/* The name stays a left-to-right English signature */
+html[dir="rtl"] .hero-title,
+html[dir="rtl"] .preloader-footer {
+    direction: ltr;
+}
+
+/* Arrows point the other way */
+html[dir="rtl"] :is(.btn-icon, .service-tab-arrow, .contact-link-arrow, .project-cta-arrow) svg {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .btn:hover .btn-icon,
+html[dir="rtl"] .contact-link-row:hover .contact-link-arrow,
+html[dir="rtl"] .project-cta-card:hover .project-cta-arrow {
+    transform: translateX(-3px);
+}
+
+/* Timelines */
+html[dir="rtl"] .about-timeline,
+html[dir="rtl"] .experience-timeline {
+    padding-left: 0;
+    padding-right: 2.5rem;
+}
+
+/* Bullet lists */
+html[dir="rtl"] .timeline-list li,
+html[dir="rtl"] .project-features li {
+    padding-left: 0;
+    padding-right: 1.1rem;
+}
+
+html[dir="rtl"] .timeline-list li::before,
+html[dir="rtl"] .project-features li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Services */
+html[dir="rtl"] .service-tab {
+    text-align: right;
+}
+
+html[dir="rtl"] .service-tab::before {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .service-tab:hover {
+    transform: translateX(-4px);
+}
+
+html[dir="rtl"] .service-tab-arrow {
+    transform: translateX(4px);
+}
+
+html[dir="rtl"] .services-preview-bgnum {
+    right: auto;
+    left: 4%;
+}
+
+html[dir="rtl"] .services-preview-glow {
+    right: auto;
+    left: -10%;
+}
+
+/* Projects */
+html[dir="rtl"] .project-card::before {
+    left: auto;
+    right: 0;
+    background: linear-gradient(270deg, var(--project-accent), transparent);
+}
+
+html[dir="rtl"] .project-media-chip {
+    right: auto;
+    left: 1.1rem;
+}
+
+/* Contact */
+html[dir="rtl"] .contact-link-hint {
+    transform: translateX(4px);
+}
+
+html[dir="rtl"] .contact-link-row[data-type="email"] .contact-link-value {
+    direction: ltr;
+    text-align: right;
+    unicode-bidi: isolate;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media screen and (max-width: 700px) {
+
+    html[dir="rtl"] .about-timeline,
+    html[dir="rtl"] .experience-timeline {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    html[dir="rtl"] .service-tab:hover {
+        transform: none;
+    }
+}
+
+
+/* ---------- Same look in both languages ---------- */
+
+/* Background name "REMON": behind the portrait in English too
+   (in Arabic the portrait is on the left, so the name stays left). */
+@media screen and (min-width: 901px) {
+
+    html:not([dir="rtl"]) .hero-bg-name {
+        left: auto;
+        right: -1%;
+    }
+}
+
+/* Logo: the star always sits on the right of the name */
+html[dir="rtl"] .logo,
+html[dir="rtl"] .preloader-logo {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
 
 /* =========================================================
 23. BRAND STAR & FLOURISH — unified blue → purple
