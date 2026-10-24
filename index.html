@@ -9,6 +9,7 @@
     <meta name="keywords"
         content="Remon Awad, React Developer, Front-End Developer, Web Developer, JavaScript, HTML, CSS">
     <meta name="author" content="Remon Awad">
+    <meta name="color-scheme" content="dark light">
 
     <title>Remon Awad | React Front-End Developer</title>
 
@@ -23,10 +24,33 @@
     <!-- =====================================================
          CSS
     ====================================================== -->
+    <!-- Cairo: Arabic font, used only when the page is switched to Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Apply the saved theme BEFORE the first paint (no flash of the wrong theme).
+         Dark is the default, same as script.js. -->
+    <script>
+        (function () {
+            var theme = null;
+            try { theme = localStorage.getItem("theme"); } catch (e) {}
+            if (theme !== "light") { document.body.classList.add("dark-mode"); }
+
+            /* Saved language (Arabic = RTL), also applied before first paint. */
+            var lang = null;
+            try { lang = localStorage.getItem("lang"); } catch (e) {}
+            if (lang === "ar") {
+                document.documentElement.lang = "ar";
+                document.documentElement.dir = "rtl";
+            }
+        })();
+    </script>
+
 
     <!-- =====================================================
          PRELOADER
@@ -101,6 +125,10 @@
                         title="Switch to dark mode">
                         <span class="theme-icon">🌙</span>
                     </button>
+
+                    <!-- Language Toggle (English / Egyptian Arabic) -->
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to Arabic"
+                        title="Switch to Arabic">ع</button>
 
                     <!-- Navigation CTA -->
                     <a href="#contact" class="nav-cta">Let's Talk</a>
@@ -535,10 +563,6 @@
                     </span>
                     <span class="skill-card-index">01</span>
                 </div>
-                <span class="skill-card-core-badge">
-                    <span class="skill-card-core-dot" aria-hidden="true"></span>
-                    Core Focus
-                </span>
                 <h3>Frontend Development</h3>
                 <div class="skill-tags">
                     <span>HTML5</span>
@@ -874,8 +898,8 @@
                     <div>
                         <p class="section-label">Selected Work</p>
                         <h2 class="section-title">
-                            Projects I'm
-                            <span>proud of.</span>
+                            Hands-on projects
+                            <span>I've learned from.</span>
                         </h2>
                     </div>
                     <p class="section-intro">
@@ -891,184 +915,125 @@
                 <div class="projects-bento">
 
                     <!-- =====================================
-                         PROJECT 01 — BOOXERA (Featured)
+                         PROJECT 01 — INTERACTIVE WEDDING INVITATION (DEMO)
                     ====================================== -->
-                    <article class="project-card project-card-featured">
+                    <article class="project-card project-card-purple">
 
-                        <div class="project-image">
+                        <a class="project-media" href="https://remon-awad.github.io/wedding-invitation-demo/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Open the live demo of Interactive Wedding Invitation">
                             <div class="project-browser">
-
-                                <div class="browser-bar">
+                                <div class="browser-bar" aria-hidden="true">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
-
-                                <div class="browser-content">
-                                    <span class="browser-badge">Featured · E-Commerce</span>
-                                    <span class="browser-title">Booxera</span>
-                                    <span class="browser-subtitle">Online Bookstore</span>
-
-                                    <div class="browser-illustration wire-books" aria-hidden="true">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
+                                <img src="./images/wedding-open.png"
+                                    alt="Screenshot of the Interactive Wedding Invitation demo" loading="lazy">
                             </div>
-                        </div>
+                            <span class="project-media-chip" aria-hidden="true">View live <span>↗</span></span>
+                        </a>
 
-                        <div class="project-overlay">
-                            <div class="project-overlay-content">
-                                <h3>Booxera</h3>
-                                <p>
-                                    An online bookstore website designed to provide
-                                    users with a simple and intuitive browsing
-                                    experience.
-                                </p>
-                                <div class="project-tech">
-                                    <span>React</span>
-                                    <span>JavaScript</span>
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>Bootstrap</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>Live Demo</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>GitHub</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                </div>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-badge">Demo</span>
+                                <span class="project-type">Interactive Invitation</span>
+                            </div>
+
+                            <h3>Interactive Wedding Invitation</h3>
+
+                            <p>
+                                A wedding invitation that starts as a sealed envelope tied
+                                with a satin ribbon. Guests untie the ribbon by hand to open
+                                it and discover the date, the schedule and a photo gallery.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>Physics-based ribbon that unties with a drag or a tap</li>
+                                <li>Scratch-off date, countdown and fireworks</li>
+                                <li>Photo gallery, RSVP form and music synthesized in code</li>
+                            </ul>
+
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Canvas API</span>
+                                <span>Web Audio API</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a class="btn btn-primary" href="https://remon-awad.github.io/wedding-invitation-demo/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Live Demo</span>
+                                    <span aria-hidden="true">↗</span>
+                                </a>
+                                <a class="btn btn-secondary" href="https://github.com/Remon-Awad/wedding-invitation-demo"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>GitHub</span>
+                                    <span aria-hidden="true">↗</span>
+                                </a>
                             </div>
                         </div>
                     </article>
 
                     <!-- =====================================
-                         PROJECT 02 — Business Landing Page
+                         PROJECT 02 — 3ALAM EL KOTOB (BOOKSTORE LANDING PAGE)
                     ====================================== -->
-                    <article class="project-card project-card-secondary-a">
+                    <article class="project-card project-card-gold">
 
-                        <div class="project-image">
+                        <a class="project-media" href="https://remon-awad.github.io/3alam-Elkotob/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Open the live demo of 3alam El Kotob bookstore landing page">
                             <div class="project-browser">
-
-                                <div class="browser-bar">
+                                <div class="browser-bar" aria-hidden="true">
                                     <span></span>
                                     <span></span>
                                     <span></span>
                                 </div>
-
-                                <div class="browser-content browser-content-sm">
-                                    <span class="browser-badge">Business</span>
-                                    <span class="browser-title browser-title-sm">Landing Page</span>
-
-                                    <div class="browser-illustration wireframe-landing" aria-hidden="true">
-                                        <span class="wire-nav"></span>
-                                        <span class="wire-hero"></span>
-                                        <div class="wire-cards">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="./images/3alam-elkotob.png"
+                                    alt="Screenshot of the 3alam El Kotob bookstore landing page" loading="lazy">
                             </div>
-                        </div>
+                            <span class="project-media-chip" aria-hidden="true">View live <span>↗</span></span>
+                        </a>
 
-                        <div class="project-overlay">
-                            <div class="project-overlay-content">
-                                <h3>Business Landing Page</h3>
-                                <p>
-                                    A modern landing page concept designed for a
-                                    small business to establish a professional
-                                    online presence.
-                                </p>
-                                <div class="project-tech">
-                                    <span>React</span>
-                                    <span>CSS</span>
-                                    <span>Responsive</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>Live Demo</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>GitHub</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                </div>
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-badge">Live</span>
+                                <span class="project-type">Landing Page · Bookstore</span>
                             </div>
-                        </div>
-                    </article>
 
-                    <!-- =====================================
-                         PROJECT 03 — Restaurant Website
-                    ====================================== -->
-                    <article class="project-card project-card-secondary-b">
+                            <h3>3alam El Kotob</h3>
 
-                        <div class="project-image">
-                            <div class="project-browser">
+                            <p>
+                                An Arabic (RTL) landing page for an online bookstore. Visitors
+                                browse the catalog, pick single books, series or bundle offers,
+                                and send their order straight to the shop on WhatsApp.
+                            </p>
 
-                                <div class="browser-bar">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
+                            <ul class="project-features">
+                                <li>Searchable catalog with category filters and bundle offers</li>
+                                <li>Shopping cart that builds a ready-to-send WhatsApp order</li>
+                                <li>Direct share links for every book, plus light and dark themes</li>
+                            </ul>
 
-                                <div class="browser-content browser-content-sm">
-                                    <span class="browser-badge">Restaurant</span>
-                                    <span class="browser-title browser-title-sm">Menu &amp; Dine</span>
-
-                                    <div class="browser-illustration wireframe-menu" aria-hidden="true">
-                                        <div class="wire-menu-row">
-                                            <span class="wire-thumb"></span>
-                                            <span class="wire-lines"><i></i><i></i></span>
-                                            <span class="wire-price"></span>
-                                        </div>
-                                        <div class="wire-menu-row">
-                                            <span class="wire-thumb"></span>
-                                            <span class="wire-lines"><i></i><i></i></span>
-                                            <span class="wire-price"></span>
-                                        </div>
-                                        <div class="wire-menu-row">
-                                            <span class="wire-thumb"></span>
-                                            <span class="wire-lines"><i></i><i></i></span>
-                                            <span class="wire-price"></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="project-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>RTL / Arabic UI</span>
+                                <span>WhatsApp Integration</span>
                             </div>
-                        </div>
 
-                        <div class="project-overlay">
-                            <div class="project-overlay-content">
-                                <h3>Restaurant Website</h3>
-                                <p>
-                                    A responsive restaurant website with an
-                                    interactive menu and clear customer-focused
-                                    navigation.
-                                </p>
-                                <div class="project-tech">
-                                    <span>React</span>
-                                    <span>JavaScript</span>
-                                    <span>API</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>Live Demo</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer">
-                                        <span>GitHub</span>
-                                        <span aria-hidden="true">↗</span>
-                                    </a>
-                                </div>
+                            <div class="project-links">
+                                <a class="btn btn-primary" href="https://remon-awad.github.io/3alam-Elkotob/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>Live Demo</span>
+                                    <span aria-hidden="true">↗</span>
+                                </a>
+                                <a class="btn btn-secondary" href="https://github.com/Remon-Awad/3alam-Elkotob"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <span>GitHub</span>
+                                    <span aria-hidden="true">↗</span>
+                                </a>
                             </div>
                         </div>
                     </article>
